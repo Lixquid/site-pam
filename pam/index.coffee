@@ -36,7 +36,7 @@ updateDateTime = ->
 		"</span>"
 	)
 
-setInterval( updateDateTime, 100 )
+setInterval( updateDateTime, 1e3 )
 updateDateTime()
 
 ## Weather #####################################################################
