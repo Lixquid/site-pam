@@ -31,7 +31,7 @@ updateDateTime = ->
 		":" +
 		( if now.getMinutes() < 10 then "0" else "" ) +
 		now.getMinutes() +
-		"<span class='sub'>" +
+		"<span class='util-sub'>" +
 		( if now.getHours() < 12 then "AM" else "PM" ) +
 		"</span>"
 	)
