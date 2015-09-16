@@ -1,0 +1,14 @@
+doctype html5
+
+html
+	head
+		style
+			include:stylus index.styl
+	body
+		#date Monday, 1#[sup st] January
+		#time 0:00#[span.sub AM]
+		
+		script( src = "https://ajax.googleapis.com/ajax/libs/jquery/" +
+			"2.1.4/jquery.min.js" )
+		script
+			include:coffee index.coffee
