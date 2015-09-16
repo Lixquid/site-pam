@@ -95,3 +95,25 @@ updateWeather = ->
 
 setInterval( updateWeather, 30 * 60e3 )
 updateWeather()
+
+## Minutecast ##################################################################
+
+$Minutecast = $( "#minutecast" )
+
+updateMinutecast = ->
+	$.getJSON "/pam/minutecast", ( data ) ->
+		html = ""
+
+		# Timeline
+		html += "<div class='timeline'>"
+		for x in data.segments
+			html += "<div class='segment' style='#{x}'></div>"
+		html += "</div>"
+
+		# Summary
+		html += "<div class='summary'>#{data.alert}</div>"
+
+		$Minutecast.html( html )
+
+setInterval( updateMinutecast, 60e3 )
+updateMinutecast()
